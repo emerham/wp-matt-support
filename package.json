@@ -1,0 +1,12 @@
+{
+  "name": "emerham",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "scss": "node-sass --output-style expanded --source-map true --source-map-contents style.scss style.css"
+  },
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
