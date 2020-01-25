@@ -5,5 +5,6 @@
  * @package  WordPress
  * @subpackage  Timber
  */
-
-Timber::render( array( 'sidebar.twig' ), $data );
+$context                    = [];
+$context['dynamic_sidebar'] = Timber::get_widgets( 'dynamic_sidebar' );
+Timber::render( array( 'sidebar.twig' ), $context );
