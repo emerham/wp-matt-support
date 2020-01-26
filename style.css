@@ -4,44 +4,130 @@
  * Author: Matthew Brabham
  */
 html {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+}
 
 header {
   padding: 1rem;
   color: white;
-  background-color: #6B3FA0; }
-  header h1 a {
-    color: #B0D028;
-    text-decoration: none; }
-  header nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center; }
-    header nav ul li {
-      list-style: none;
-      flex: 1;
-      transition: 200ms linear; }
-      header nav ul li a {
-        color: white;
-        letter-spacing: 2px;
-        padding: 20px 5px;
-        display: inline-block;
-        text-decoration: none;
-        text-align: center;
-        width: 100%; }
-      header nav ul li:hover, header nav ul li:focus, header nav ul li:focus-within, header nav ul li:active {
-        background-color: #401573; }
+  background-color: #572693;
+}
+
+header h1 {
+  font-family: "Ubuntu", "Open Sans", sans-serif;
+}
+
+header h1 a {
+  color: #B0D028;
+  text-decoration: none;
+}
+
+header nav {
+  font-family: "Fira Sans", "Open Sans", sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  text-transform: uppercase;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+}
+
+header nav ul li {
+  list-style: none;
+  flex: 1;
+  transition: 200ms linear;
+}
+
+header nav ul li a {
+  color: white;
+  letter-spacing: 2px;
+  padding: 20px 5px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+
+header nav ul li:hover, header nav ul li:focus, header nav ul li:focus-within, header nav ul li:active {
+  background-color: #401573;
+}
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff; }
-  body .skip-link {
-    display: none; }
+  background-color: #fff;
+}
+
+body .skip-link {
+  display: none;
+}
+
+body #content {
+  padding-left: 1rem;
+}
+
+body .inner-content-wrapper {
+  display: flex;
+}
+
+body .inner-content-wrapper .wrapper {
+  flex: 1;
+}
+
+body .inner-content-wrapper .layout-sidebar {
+  flex: 0 0 25%;
+}
+
+.article-content h1 {
+  text-transform: uppercase;
+}
+
+.article-content .article-edit-link {
+  box-sizing: border-box;
+  padding: .5rem 0.8rem;
+  color: white;
+  background-color: #931C89;
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 5%;
+  transition: ease 200ms;
+}
+
+.article-content .article-edit-link:hover, .article-content .article-edit-link:active, .article-content .article-edit-link:focus {
+  background-color: #740D6B;
+}
+
+.article-content .article-body {
+  padding: 0 .5rem;
+}
+
+.blog-comment {
+  border: 1px solid #AA9E13;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+}
 
 footer {
   background-color: black;
-  color: white; }
+  color: white;
+  padding: 1rem;
+}
+
+@media all and (max-width: 400px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    flex: 1 1 50%;
+  }
+  body .inner-content-wrapper {
+    flex-direction: column;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
