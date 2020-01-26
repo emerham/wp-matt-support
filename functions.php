@@ -75,6 +75,7 @@ class StarterSite extends Timber\Site {
 		add_filter( 'timber/twig', [ $this, 'add_to_twig' ] );
 		add_action( 'init', [ $this, 'register_post_types' ] );
 		add_action( 'init', [ $this, 'register_taxonomies' ] );
+		add_action( 'init', [ $this, 'register_widgets' ] );
 		parent::__construct();
 	}
 
@@ -86,6 +87,17 @@ class StarterSite extends Timber\Site {
 	/** This is where you can register custom taxonomies. */
 	public function register_taxonomies() {
 
+	}
+
+	public function register_widgets() {
+		register_sidebar( [
+			'name'          => __( 'Sidebar' ),
+			'id'            => 'sidebar',
+			'before_widget' => '<aside id="%1$s" class="sidebar-item %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		] );
 	}
 
 	/** This is where you add some context
