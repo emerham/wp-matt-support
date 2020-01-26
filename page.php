@@ -21,7 +21,8 @@
  * @since    Timber 0.1
  */
 
-$context = Timber::context();
+$context            = Timber::context();
+$context['sidebar'] = Timber::get_widgets( 'sidebar' );
 
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
