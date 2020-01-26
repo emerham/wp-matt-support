@@ -23,16 +23,18 @@
 
 <section id="content" role="main" class="content-wrapper">
     {% if title %}<h1>{{ title }}</h1>{% endif %}
-    <div class="wrapper {{ sidebar_class }}">
-        {% block content %}
-            Sorry, no content
-        {% endblock %}
+    <div class="inner-content-wrapper">
+        <div class="wrapper {{ sidebar_class }}">
+            {% block content %}
+                Sorry, no content
+            {% endblock %}
+        </div>
+        {% if sidebar %}
+            <aside class="layout-sidebar">
+                {% include 'sidebar.twig' %}
+            </aside>
+        {% endif %}
     </div>
-    {% if sidebar %}
-        <aside class="layout-sidebar">
-            {{ sidebar }}
-        </aside>
-    {% endif %}
 </section>
 
 {% block footer %}
