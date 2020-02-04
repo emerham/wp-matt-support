@@ -159,6 +159,12 @@ footer {
 }
 
 @media all and (max-width: 600px) {
+  #nav-main {
+    display: none;
+  }
+  #nav-main.active {
+    display: block;
+  }
   nav {
     ul {
       flex-direction: column;
