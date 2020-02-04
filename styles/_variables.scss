@@ -1,0 +1,32 @@
+// Colors
+$color-primary-0: #6B3FA0; // Main Primary color */
+$color-primary-1: #AF8FD5;
+$color-primary-2: #875FB7;
+$color-primary-3: #572693;
+$color-primary-4: #401573;
+
+$color-secondary-1-0: #A13798; // Main Secondary color (1) */
+$color-secondary-1-1: #D589CF;
+$color-secondary-1-2: #B857B0;
+$color-secondary-1-3: #931C89;
+$color-secondary-1-4: #740D6B;
+
+$color-secondary-2-0: #C6E34D; // Main Secondary color (2) */
+$color-secondary-2-1: #E9FAA1;
+$color-secondary-2-2: #DDF675;
+$color-secondary-2-3: #B0D028;
+$color-secondary-2-4: #88A412;
+
+$color-complement-0: #ECE050; // Main Complement color */
+$color-complement-1: #FFF8A4;
+$color-complement-2: #FFF479;
+$color-complement-3: #D8CB29;
+$color-complement-4: #AA9E13;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Cantarell:400,700&display=swap');
+$font__main: "Cantarell", "Open Sans", sans-serif;
+$font__nav: "Fira Sans", "Open Sans", sans-serif;
+
+$content__width: 86%;
+$content__width--wide: 100%;

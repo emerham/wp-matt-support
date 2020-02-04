@@ -168,7 +168,7 @@ class StarterSite extends Timber\Site {
 
 		add_theme_support( 'editor-styles' );
 
-//		add_editor_style( 'style.css' );
+		add_editor_style( 'styles/editor-style.css' );
 	}
 
 	/** This Would return 'foo bar!'.

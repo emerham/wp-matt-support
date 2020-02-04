@@ -1,0 +1,18 @@
+@import 'variables';
+
+.wp-block {
+  max-width: $content__width;
+  font-family: $font__main;
+
+  .editor-post-title__block {
+    font-family: $font__main;
+  }
+
+  &[data-align="wide"] {
+    max-width: $content__width--wide;
+  }
+
+  &[data-align="full"] {
+    max-width: none;
+  }
+}
