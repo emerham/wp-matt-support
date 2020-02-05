@@ -4,16 +4,16 @@
   font-family: "Cantarell", "Open Sans", sans-serif;
 }
 
-.wp-block .editor-post-title__block {
-  font-family: "Cantarell", "Open Sans", sans-serif;
-}
-
 .wp-block[data-align="wide"] {
   max-width: 100%;
 }
 
 .wp-block[data-align="full"] {
   max-width: none;
+}
+
+.editor-post-title__block .editor-post-title__input {
+  font-family: "Cantarell", "Open Sans", sans-serif;
 }
 
 /*# sourceMappingURL=editor-style.css.map */

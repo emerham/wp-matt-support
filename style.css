@@ -91,8 +91,26 @@ body .inner-content-wrapper .layout-sidebar {
   flex: 0 0 25%;
 }
 
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
 .article-content h1 {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .article-content .article-edit-link {
@@ -113,6 +131,42 @@ body .inner-content-wrapper .layout-sidebar {
 
 .article-content .article-body {
   padding: 0 .5rem;
+}
+
+button.btn {
+  box-sizing: border-box;
+  padding: .5rem 0.8rem;
+  color: white;
+  background-color: #931C89;
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 5%;
+  border: none;
+  transition: ease 200ms;
+}
+
+button.btn:hover, button.btn:active, button.btn:focus {
+  background-color: #740D6B;
+  cursor: pointer;
+}
+
+button[type="reset"] {
+  box-sizing: border-box;
+  padding: .5rem 0.8rem;
+  color: black;
+  background-color: #B0D028;
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 5%;
+  border: none;
+  transition: ease 200ms;
+}
+
+button[type="reset"]:hover, button[type="reset"]:active, button[type="reset"]:focus {
+  background-color: #88A412;
+  cursor: pointer;
 }
 
 .blog-comment {
