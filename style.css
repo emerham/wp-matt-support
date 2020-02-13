@@ -65,6 +65,32 @@ header nav ul li:hover, header nav ul li:focus, header nav ul li:focus-within, h
   background-color: #401573;
 }
 
+header .mobile-nav-toggle {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+header .mobile-nav-toggle .bar {
+  margin: .2rem;
+  height: .3rem;
+  width: 30px;
+  background-color: black;
+  transition: .2s;
+}
+
+header .mobile-nav-toggle .top.open {
+  transform: translateY(11px) rotate(45deg);
+}
+
+header .mobile-nav-toggle .middle.open {
+  opacity: 0;
+}
+
+header .mobile-nav-toggle .bottom.open {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -182,6 +208,9 @@ button[type="reset"]:hover, button[type="reset"]:active, button[type="reset"]:fo
   }
   #nav-main.active {
     display: block;
+  }
+  #mobile-nav-toggle {
+    display: flex;
   }
   nav ul {
     flex-direction: column;
