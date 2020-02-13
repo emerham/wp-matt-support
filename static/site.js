@@ -1,5 +1,6 @@
 jQuery( document ).ready( function( $ ) {
-
-  // Your JavaScript goes here
-
+    $('#mobile-nav-toggle').click(function () {
+        let myclass = $(this).getElementsByClassName('bar');
+        alert(myclass);
+    })
 });

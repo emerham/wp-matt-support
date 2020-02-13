@@ -14,6 +14,11 @@
             <h1 class="hdr-logo" role="banner">
                 <a class="hdr-logo-link" href="{{ site.url }}" rel="home">{{ site.name }}</a>
             </h1>
+            <div id="mobile-nav-toggle" class="mobile-nav-toggle">
+                <div id="top" class="bar top"></div>
+                <div id="middle" class="bar middle"></div>
+                <div id="bottom" class="bar bottom"></div>
+            </div>
             <nav id="nav-main" class="nav-main" role="navigation">
                 {% include "menu.twig" with {'items': menu.get_items} %}
             </nav><!-- #nav -->
