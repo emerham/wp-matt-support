@@ -39,7 +39,6 @@ header {
         list-style: none;
         flex: 1;
         transition: 200ms linear;
-        width: 100%;
 
         a {
           color: white;
@@ -103,7 +102,7 @@ body {
   }
 
   #content {
-    padding-left: 0.5rem;
+    padding: 0 0.5rem;
   }
 
   .inner-content-wrapper {
@@ -213,7 +212,7 @@ button[type="reset"] {
   margin: 0 0.5rem 0 0;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 668px) {
   #nav-main {
     display: none;
   }

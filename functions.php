@@ -91,7 +91,7 @@ class StarterSite extends Timber\Site {
 
 	public function register_widgets() {
 		register_sidebar( [
-			'name'          => __( 'Sidebar' ),
+			'name'          => __( 'Right Sidebar' ),
 			'id'            => 'sidebar',
 			'before_widget' => '<aside id="%1$s" class="sidebar-item %2$s">',
 			'after_widget'  => '</aside>',
