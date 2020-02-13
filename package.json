@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "scss": "node-sass --output-style expanded --source-map true --source-map-contents styles/main.scss style.css"
+    "scss": "node-sass --output-style expanded --source-map true --source-map-contents style.scss style.css"
   },
   "dependencies": {
     "node-sass": "^4.13.1"
