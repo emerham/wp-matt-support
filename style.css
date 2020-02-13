@@ -48,7 +48,6 @@ header nav ul li {
   list-style: none;
   flex: 1;
   transition: 200ms linear;
-  width: 100%;
 }
 
 header nav ul li a {
@@ -76,7 +75,7 @@ body .skip-link {
 }
 
 body #content {
-  padding-left: 0.5rem;
+  padding: 0 0.5rem;
 }
 
 body .inner-content-wrapper {
@@ -176,7 +175,7 @@ button[type="reset"]:hover, button[type="reset"]:active, button[type="reset"]:fo
   margin: 0 0.5rem 0 0;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 668px) {
   #nav-main {
     display: none;
   }
