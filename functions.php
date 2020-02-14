@@ -52,7 +52,7 @@ if ( ! class_exists( 'Timber' ) ) {
 /**
  * Sets the directories (inside your theme) to find .twig files
  */
-Timber::$dirname = [ 'templates', 'views' ];
+Timber::$dirname = array( 'templates', 'views' );
 
 /**
  * By default, Timber does NOT autoescape values. Want to enable Twig's
@@ -70,12 +70,13 @@ class StarterSite extends Timber\Site {
 
 	/** Add timber support. */
 	public function __construct() {
-		add_action( 'after_setup_theme', [ $this, 'theme_supports' ] );
-		add_filter( 'timber/context', [ $this, 'add_to_context' ] );
-		add_filter( 'timber/twig', [ $this, 'add_to_twig' ] );
-		add_action( 'init', [ $this, 'register_post_types' ] );
-		add_action( 'init', [ $this, 'register_taxonomies' ] );
-		add_action( 'init', [ $this, 'register_widgets' ] );
+		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
+		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
+		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
+		add_action( 'init', array( $this, 'register_post_types' ) );
+		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		add_action( 'init', array( $this, 'register_widgets' ) );
+		add_action( 'init', array( $this, 'register_scripts' ) );
 		parent::__construct();
 	}
 
@@ -90,14 +91,26 @@ class StarterSite extends Timber\Site {
 	}
 
 	public function register_widgets() {
-		register_sidebar( [
-			'name'          => __( 'Right Sidebar' ),
-			'id'            => 'sidebar',
-			'before_widget' => '<aside id="%1$s" class="sidebar-item %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		] );
+		register_sidebar(
+			array(
+				'name'          => __( 'Right Sidebar' ),
+				'id'            => 'sidebar',
+				'before_widget' => '<aside id="%1$s" class="sidebar-item %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
+	}
+
+	public function register_scripts() {
+		wp_enqueue_script(
+			'site-scripts',
+			get_template_directory_uri() . '/static/site.js',
+			array( 'jquery' ),
+			'2.1.7',
+			true
+		);
 	}
 
 	/** This is where you add some context
@@ -138,12 +151,12 @@ class StarterSite extends Timber\Site {
 		 */
 		add_theme_support(
 			'html5',
-			[
+			array(
 				'comment-form',
 				'comment-list',
 				'gallery',
 				'caption',
-			]
+			)
 		);
 
 		/*
@@ -153,7 +166,7 @@ class StarterSite extends Timber\Site {
 		 */
 		add_theme_support(
 			'post-formats',
-			[
+			array(
 				'aside',
 				'image',
 				'video',
@@ -161,7 +174,7 @@ class StarterSite extends Timber\Site {
 				'link',
 				'gallery',
 				'audio',
-			]
+			)
 		);
 
 		add_theme_support( 'menus' );
@@ -187,7 +200,7 @@ class StarterSite extends Timber\Site {
 	 */
 	public function add_to_twig( $twig ) {
 		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
-		$twig->addFilter( new Twig\TwigFilter( 'myfoo', [ $this, 'myfoo' ] ) );
+		$twig->addFilter( new Twig\TwigFilter( 'myfoo', array( $this, 'myfoo' ) ) );
 
 		return $twig;
 	}

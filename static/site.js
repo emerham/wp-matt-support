@@ -1,6 +1,8 @@
-jQuery( document ).ready( function( $ ) {
-    $('#mobile-nav-toggle').click(function () {
-        let myclass = $(this).getElementsByClassName('bar');
-        alert(myclass);
-    })
+jQuery(document).ready(function ($) {
+
+});
+
+jQuery('#mobile-nav-toggle').click(function () {
+    jQuery('#nav-main').slideToggle('.2s');
+    jQuery(this).children().toggleClass("open");
 });
