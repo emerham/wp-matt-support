@@ -4,6 +4,12 @@
  * Author: Matthew Brabham
  */
 @import url("https://fonts.googleapis.com/css?family=Cantarell:400,700&display=swap");
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono/web/eot/JetBrainsMono-Regular.eot");
+  src: url("fonts/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2") format("woff2"), url("fonts/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff") format("woff"), url("fonts/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+}
+
 footer {
   background-color: black;
   color: white;
@@ -46,7 +52,8 @@ header nav ul {
 
 header nav ul li {
   list-style: none;
-  flex: 1;
+  flex: 0 auto;
+  padding: 0 1rem;
   transition: 200ms linear;
 }
 
@@ -94,10 +101,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-}
-
-body .skip-link {
-  display: none;
 }
 
 body #content {
@@ -158,6 +161,87 @@ h4 {
   padding: 0 .5rem;
 }
 
+.article-content .article-body pre {
+  font-family: "JetBrains Mono", "Ubuntu", "DejaVu Sans Mono", monospace;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  background-color: lightgrey;
+  overflow-x: auto;
+  display: block;
+  margin: 1em 0;
+  width: 500px;
+}
+
+.blog-comment {
+  border: 1px solid #AA9E13;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem 0 0;
+}
+
+@media all and (max-width: 668px) {
+  header nav {
+    display: none;
+  }
+  header nav.active {
+    display: block;
+  }
+  header #mobile-nav-toggle {
+    display: flex;
+  }
+  header nav ul {
+    flex-direction: column;
+  }
+  header nav ul li {
+    flex: 1 1 50%;
+  }
+  body .inner-content-wrapper {
+    flex-direction: column;
+  }
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+.searchform {
+  margin: 1rem 0;
+}
+
+.searchform-wrapper {
+  display: flex;
+}
+
+.searchform-wrapper #s {
+  flex: 4 1 auto;
+}
+
 button.btn {
   box-sizing: border-box;
   padding: .5rem 0.8rem;
@@ -176,50 +260,13 @@ button.btn:hover, button.btn:active, button.btn:focus {
   cursor: pointer;
 }
 
-button[type="reset"] {
-  box-sizing: border-box;
-  padding: .5rem 0.8rem;
+button.btn.btn-cancel {
   color: black;
   background-color: #B0D028;
-  text-decoration: none;
-  text-align: center;
-  text-transform: capitalize;
-  border-radius: 5%;
-  border: none;
-  transition: ease 200ms;
 }
 
-button[type="reset"]:hover, button[type="reset"]:active, button[type="reset"]:focus {
+button.btn.btn-cancel:hover, button.btn.btn-cancel:active, button.btn.btn-cancel:focus {
   background-color: #88A412;
-  cursor: pointer;
-}
-
-.blog-comment {
-  border: 1px solid #AA9E13;
-  border-radius: 5px;
-  padding: 0.5rem 1.5rem;
-  margin: 0 0.5rem 0 0;
-}
-
-@media all and (max-width: 668px) {
-  #nav-main {
-    display: none;
-  }
-  #nav-main.active {
-    display: block;
-  }
-  #mobile-nav-toggle {
-    display: flex;
-  }
-  nav ul {
-    flex-direction: column;
-  }
-  nav ul li {
-    flex: 1 1 50%;
-  }
-  body .inner-content-wrapper {
-    flex-direction: column;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

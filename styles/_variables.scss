@@ -25,8 +25,16 @@ $color-complement-4: #AA9E13;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Cantarell:400,700&display=swap');
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono/web/eot/JetBrainsMono-Regular.eot");
+  src: url("fonts/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2") format("woff2"),
+  url("fonts/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff") format("woff"),
+  url("fonts/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+}
+
 $font__main: "Cantarell", "Open Sans", sans-serif;
 $font__nav: "Fira Sans", "Open Sans", sans-serif;
-
+$font__code: "JetBrains Mono", "Ubuntu", "DejaVu Sans Mono", monospace;
 $content__width: 86%;
 $content__width--wide: 100%;

@@ -6,16 +6,25 @@
 
 
   &[data-align="wide"] {
-    max-width: $content__width--wide;
+	max-width: $content__width--wide;
   }
 
   &[data-align="full"] {
-    max-width: none;
+	max-width: none;
   }
 }
 
 .editor-post-title__block {
   .editor-post-title__input {
-    font-family: $font__main;
+	font-family: $font__main;
   }
+}
+
+.block-editor-block-list__block-edit{
+  .wp-block-code{
+	font-family: $font__code;
+
+  }
+}
+html.wp-toolbar body.wp-admin.wp-core-ui.js.post-php.auto-fold.admin-bar.post-type-post.branch-5-3.version-5-3-2.admin-color-fresh.locale-en-us.block-editor-page.wp-embed-responsive.customize-support.svg div#wpwrap div#wpcontent div#wpbody div#wpbody-content div.block-editor div#editor.block-editor__container.hide-if-no-js div.components-drop-zone__provider div.components-navigate-regions div.edit-post-layout.is-sidebar-opened div.edit-post-layout__content div.edit-post-visual-editor.editor-styles-wrapper div div.editor-writing-flow.block-editor-writing-flow div div div div.editor-block-list__layout.block-editor-block-list__layout div#block-3b49a4d9-3f8b-4a87-ae13-087d22fba66e.wp-block.editor-block-list__block.block-editor-block-list__block.is-selected div.editor-block-list__block-edit.block-editor-block-list__block-edit div div.wp-block-code {
 }
