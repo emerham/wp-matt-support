@@ -15,6 +15,12 @@ header {
   padding: 1rem;
   color: white;
   background-color: $color-primary-3;
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+	flex: 0 1 1200px;
+  }
 
   h1 {
 
@@ -98,21 +104,22 @@ body {
   section {
   }
 
-  #content {
+  #content.main-content {
 	padding: 0 0.5rem;
-  }
-
-  .inner-content-wrapper {
 	display: flex;
+	justify-content: center;
 
-	.wrapper {
-	  flex: 1;
+	.main-content-wrapper {
+	  flex: 0 1 1200px;
+	  display: flex;
+	  justify-content: space-between;
 	}
 
 	.layout-sidebar {
-	  flex: 0 0 25%;
+	  flex: 0 0 12rem;
 	}
   }
+
 }
 
 h1 {
@@ -206,7 +213,7 @@ h4 {
 	}
   }
   body {
-	.inner-content-wrapper {
+	.main-content-wrapper {
 	  flex-direction: column;
 	}
   }
