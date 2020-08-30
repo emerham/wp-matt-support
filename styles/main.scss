@@ -197,7 +197,19 @@ h4 {
   margin: 0 0.5rem 0 0;
 }
 
-@media all and (max-width: 668px) {
+@media screen and (max-width: 1000px) {
+  body {
+	#content.main-content {
+	  .main-content-wrapper {
+		.layout-sidebar {
+		  grid-column: 2 / 11;
+		}
+	  }
+	}
+  }
+}
+
+@media screen and (max-width: 668px) {
   header {
 	nav {
 	  display: none;
