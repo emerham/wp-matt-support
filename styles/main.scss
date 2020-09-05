@@ -106,12 +106,10 @@ body {
 
   #content.main-content {
 	padding: 0 0.5rem;
-	display: flex;
-	justify-content: center;
+	max-width: 1200px;
+	margin: auto;
 
 	.main-content-wrapper {
-	  //flex: 0 1 1200px;
-	  //display: flex;
 	  display: grid;
 	  grid-template-rows: 1fr;
 	  grid-template-columns: repeat(14, minmax(0, 1fr));
@@ -120,12 +118,12 @@ body {
 	}
 
 	.layout-content {
-	  grid-column: 2 / 11;
+	  grid-column: 1 / 11;
 	}
 
 	.layout-sidebar {
 	  //flex: 0 0 12rem;
-	  grid-column: 11 / 14;
+	  grid-column: 11 / 15;
 	}
   }
 
@@ -200,10 +198,12 @@ h4 {
 @media screen and (max-width: 1000px) {
   body {
 	#content.main-content {
-	  .main-content-wrapper {
-		.layout-sidebar {
-		  grid-column: 2 / 11;
-		}
+	  .layout-content {
+		grid-column: 2 / 14;
+	  }
+
+	  .layout-sidebar {
+		grid-column: 2 / 14;
 	  }
 	}
   }

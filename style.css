@@ -117,8 +117,8 @@ body {
 
 body #content.main-content {
   padding: 0 0.5rem;
-  display: flex;
-  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
 body #content.main-content .main-content-wrapper {
@@ -130,11 +130,11 @@ body #content.main-content .main-content-wrapper {
 }
 
 body #content.main-content .layout-content {
-  grid-column: 2 / 11;
+  grid-column: 1 / 11;
 }
 
 body #content.main-content .layout-sidebar {
-  grid-column: 11 / 14;
+  grid-column: 11 / 15;
 }
 
 h1 {
@@ -198,8 +198,11 @@ h4 {
 }
 
 @media screen and (max-width: 1000px) {
-  body #content.main-content .main-content-wrapper .layout-sidebar {
-    grid-column: 2 / 11;
+  body #content.main-content .layout-content {
+    grid-column: 2 / 14;
+  }
+  body #content.main-content .layout-sidebar {
+    grid-column: 2 / 14;
   }
 }
 
