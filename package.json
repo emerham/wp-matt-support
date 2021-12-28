@@ -7,6 +7,6 @@
     "scss": "node-sass --output-style expanded --source-map true --source-map-contents style.scss style.css"
   },
   "dependencies": {
-    "node-sass": "6"
+    "node-sass": "7.0.1"
   }
 }
